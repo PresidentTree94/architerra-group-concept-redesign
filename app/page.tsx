@@ -1,65 +1,100 @@
 import Image from "next/image";
 
+const stats = [
+  { label: "Years of Excellence", number: 30 },
+  { label: "Projects Completed", number: 200 },
+  { label: "Awards Received", number: 40 },
+  { label: "Team Members", number: 15 }
+]
+
+const projects = [
+  { title: "Simpson Mine Park", type: "Parks & Recreation", image: "https://static.wixstatic.com/media/9ca5af_97cc44d883eb4f6bb250b64d88855c37~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_97cc44d883eb4f6bb250b64d88855c37~mv2.jpg" },
+  { title: "Cherry Creek Trail", type: "Trails & Greenways", image: "https://static.wixstatic.com/media/9ca5af_262143483f6042e18afa3d3ad9448df7~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_262143483f6042e18afa3d3ad9448df7~mv2.jpg" },
+  { title: "Discovery Park", type: "Community Spaces", image: "https://static.wixstatic.com/media/9ca5af_476e480d52b345a39e1986b376010341~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_476e480d52b345a39e1986b376010341~mv2.jpg" },
+  { title: "Globeville Landing", type: "Urban Design", image: "https://static.wixstatic.com/media/9ca5af_46e70df9fb4a45a296808ed08776eda8~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_46e70df9fb4a45a296808ed08776eda8~mv2.jpg" }
+];
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <section className="border relative min-h-screen flex justify-center items-end">
+        <img src="https://static.wixstatic.com/media/9ca5af_32d8b1271dfa47c38952d2f164e50d76~mv2.jpg/v1/fill/w_1280,h_654,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_32d8b1271dfa47c38952d2f164e50d76~mv2.jpg" className="object-cover w-full h-full absolute" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black/50"></div>
+        <div className="relative p-8 text-background-light text-center">
+          <span className="tiny text-background-light/80">Trails & Greenways</span>
+          <h1 className="text-7xl font-light mt-3 mb-12">East-West Trail</h1>
+          <a href="" className="tiny inline-block border border-background-light/70 px-8 py-3 font-light">View Projects</a>
+          <div className="flex justify-center gap-3 mt-14">
+            <button className="w-2 h-2 bg-background-light/40 rounded-full"></button>
+            <button className="w-2 h-2 bg-background-light/40 rounded-full"></button>
+            <button className="w-2 h-2 bg-background-light/40 rounded-full"></button>
+            <button className="w-2 h-2 bg-background-light/40 rounded-full"></button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="absolute left-8 top-1/2 -translate-y-1/2 border border-background-light/40 text-background-light w-12 h-12 flex items-center justify-center">
+          <i className="ri-arrow-left-s-line text-lg"></i>
         </div>
-      </main>
-    </div>
+        <div className="absolute right-8 top-1/2 -translate-y-1/2 border border-background-light/40 text-background-light w-12 h-12 flex items-center justify-center">
+          <i className="ri-arrow-right-s-line text-lg"></i>
+        </div>
+      </section>
+      <section className="bg-background-light">
+        <div>
+          <div className="grid grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="tiny text-primary">Who We Are</span>
+              <h2 className="mt-4 mb-8 text-6xl">
+                <span className="block uppercase">Architerra :</span>
+                <span className="text-primary italic">Design of earth, land</span>
+              </h2>
+              <p className="text-sm text-foreground-light">At The Architerra Group, we believe that achieving balance is fundamental to successful design: balance between the transformation and conservation of the landscape; balance between diverse goals of project stakeholders; and balance between a creative vision and project constraints.</p>
+              <p className="text-sm text-foreground-light mt-6 mb-8">Our firm's mission is to enhance local communities through the design of public spaces. Our inclusive landscape architecture design process allows us to work for the users of our projects by working with them.</p>
+              <a href="" className="tiny text-primary underline underline-offset-8">Learn Our Story</a>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img src="https://static.wixstatic.com/media/9ca5af_4f3e5c104c654cc1b8231664c0378e4a~mv2.jpg/v1/fill/w_603,h_695,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_4f3e5c104c654cc1b8231664c0378e4a~mv2.jpg" className="h-80 rounded-lg" />
+              <img src="https://static.wixstatic.com/media/9ca5af_97cc44d883eb4f6bb250b64d88855c37~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_97cc44d883eb4f6bb250b64d88855c37~mv2.jpg" className="h-80 rounded-lg mt-8" />
+            </div>
+          </div>
+          <div className="grid grid-cols-4 gap-8 mt-20 pt-16 border-t border-[oklch(.94_.006_80)] text-center">
+            {stats.map((s, index) => (
+              <div key={index}>
+                <p className="text-5xl text-primary font-display font-light">{s.number}+</p>
+                <p className="tiny text-foreground-light">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-background-dark">
+        <div>
+          <span className="tiny text-primary">Our Work</span>
+          <div className="flex items-end justify-between mt-3">
+            <h2 className="text-5xl">Featured Projects</h2>
+            <a href="" className="tiny text-foreground-light">View All Projects</a>
+          </div>
+          <div className="grid grid-cols-4 gap-4 mt-16">
+            {projects.map((p, index) => (
+              <div key={index} className="rounded-lg overflow-hidden flex items-end relative h-105">
+                <img src={p.image} alt={p.title} className="absolute object-cover w-full h-full" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="relative p-6">
+                  <span className="tiny text-background-light/70">{p.type}</span>
+                  <h3 className="text-xl text-background-light font-display">{p.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-background-light">
+        <div className="text-center">
+          <span className="tiny text-primary">What We Do</span>
+          <h2 className="text-5xl mt-3">Our Services</h2>
+        </div>
+      </section>
+      <section className="bg-foreground-dark text-white">Recognition</section>
+      <section>Contact</section>
+    </main>
   );
 }
