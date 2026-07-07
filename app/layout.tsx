@@ -30,7 +30,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
-        <footer></footer>
+        <footer className="bg-foreground-dark p-16">
+          <div>Info</div>
+          <div>Copyright</div>
+        </footer>
       </body>
     </html>
   );

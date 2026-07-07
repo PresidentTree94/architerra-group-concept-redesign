@@ -6,6 +6,7 @@
   --color-foreground-light: oklch(.4 0 0);
   --color-foreground-dark: oklch(.08 0 0);
   --color-primary: oklch(.43 .115 155);
+  --color-secondary: oklch(.63 .12 155);
   --font-display: var(--font-cormorant-garamond);
   --font-body: var(--font-montserrat);
 }
@@ -14,15 +15,15 @@ body {
   font-family: var(--font-body);
 }
 
-section:not(:first-of-type) {
+section:not(:first-of-type, :last-of-type) {
   @apply px-10 py-24;
 }
 
-section:not(:first-of-type) > div {
+section:not(:first-of-type, :last-of-type) > div {
   @apply max-w-7xl mx-auto;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
   @apply font-display;
 }
 
