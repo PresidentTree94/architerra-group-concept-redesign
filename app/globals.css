@@ -5,6 +5,7 @@
   --color-background-dark: oklch(.97 .004 80);
   --color-foreground-light: oklch(.4 0 0);
   --color-foreground-dark: oklch(.08 0 0);
+  --color-foreground-inverse: oklch(.65 0 0);
   --color-primary: oklch(.43 .115 155);
   --color-secondary: oklch(.63 .12 155);
   --color-border: oklch(.94 .006 80);
@@ -24,7 +25,7 @@ section:not(:first-of-type, :last-of-type) > div {
   @apply max-w-7xl mx-auto;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   @apply font-display;
 }
 
@@ -32,7 +33,7 @@ h2 {
   @apply font-light text-foreground-dark;
 }
 
-p {
+p, address {
   @apply leading-relaxed;
 }
 
