@@ -30,18 +30,18 @@ export default function Navbar() {
   const isActive = scrolled || open;
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-1 ${isActive ? "bg-background-light border-b" : "bg-transparent"} border-[oklch(.94_.006_80)] transition-all duration-300`}>
-      <div className="flex justify-between items-center">
+    <header className={`fixed top-0 inset-x-0 z-1 ${isActive ? "bg-background-light border-b" : "bg-transparent"} border-border transition-all duration-300`}>
+      <div className="flex flex-col md:flex-row justify-between md:items-center">
         <div className="h-16 flex justify-between items-center px-6">
-          <Link href="/">
-            {/*Logo*/}
-            <span className={`text-xs font-semibold uppercase tracking-widest ${isActive ? "text-foreground-dark" : "text-background-light"}`}>Architerra Group</span>
+          <Link href="/" className="flex items-center gap-3">
+            <i className={`ri-triangle-line text-4xl ${isActive ? "text-secondary" : "text-background-light"} transition-colors duration-300`}></i>
+            <span className={`text-xs font-semibold uppercase tracking-widest ${isActive ? "text-foreground-dark" : "text-background-light"} transition-colors duration-300`}>Architerra Group</span>
           </Link>
-          {/*Mobile menu button*/}
+          <i className={`ri-leaf-line text-xl ${isActive ? "text-secondary": "text-background-light"} ${open ? "rotate-120" : "-rotate-30"} md:hidden transition-all duration-300`} onClick={() => setOpen(!open)}></i>
         </div>
-        <nav className="flex gap-8 px-6 text-sm font-medium">
+        <nav className={`${open ? "flex" : "hidden md:flex"} flex-col md:flex-row gap-8 px-6 py-6 md:py-0 text-sm font-medium border-t border-border md:border-t-0`}>
           {navs.map((n, index) => (
-            <Link key={index} href={n.link} className={`${isActive ? "text-foreground-light" : "text-background-light/85"}`}>{n.text}</Link>
+            <Link key={index} href={n.link} className={`${isActive ? "text-foreground-light hover:text-primary" : "text-background-light/85 hover:text-background-light"} transition-colors duration-300`}>{n.text}</Link>
           ))}
         </nav>
       </div>

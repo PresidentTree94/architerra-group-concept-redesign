@@ -30,9 +30,11 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
-        <footer className="bg-foreground-dark p-16">
-          <div>Info</div>
-          <div>Copyright</div>
+        <footer className="bg-foreground-dark px-8 py-4">
+          <div className="text-foreground-light text-xs flex flex-col sm:flex-row justify-between text-center">
+            <p>&copy; 2026 Architerra Group Concept Redesign</p>
+            <p>Made by <a href="https://karlydev.vercel.app/" className="underline">karly.dev</a></p>
+          </div>
         </footer>
       </body>
     </html>

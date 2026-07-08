@@ -7,6 +7,7 @@
   --color-foreground-dark: oklch(.08 0 0);
   --color-primary: oklch(.43 .115 155);
   --color-secondary: oklch(.63 .12 155);
+  --color-border: oklch(.94 .006 80);
   --font-display: var(--font-cormorant-garamond);
   --font-body: var(--font-montserrat);
 }
@@ -16,7 +17,7 @@ body {
 }
 
 section:not(:first-of-type, :last-of-type) {
-  @apply px-10 py-24;
+  @apply px-8 md:px-16 py-24;
 }
 
 section:not(:first-of-type, :last-of-type) > div {
