@@ -50,8 +50,8 @@ export default function Home() {
               <Link href="/about" className="tiny text-primary border-b border-primary inline-flex items-center gap-2 pb-1 hover:border-secondary hover:text-secondary transition-colors duration-200">Learn Our Story<i className="ri-arrow-right-line text-xs"></i></Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-4">
-              <img src="https://static.wixstatic.com/media/9ca5af_4f3e5c104c654cc1b8231664c0378e4a~mv2.jpg/v1/fill/w_603,h_695,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_4f3e5c104c654cc1b8231664c0378e4a~mv2.jpg" className="h-80 rounded-lg object-cover w-full" />
-              <img src="https://static.wixstatic.com/media/9ca5af_97cc44d883eb4f6bb250b64d88855c37~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_97cc44d883eb4f6bb250b64d88855c37~mv2.jpg" className="h-80 rounded-lg object-cover w-full mt-8" />
+              <Image src="/open-spaces.png" alt="Open Spaces" width={1590} height={710} className="h-80 rounded-lg object-cover" />
+              <Image src="/trails-and-crossings.png" alt="Trails and Crossings" width={1591} height={626} className="h-80 rounded-lg object-cover mt-8" />
             </div>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20 pt-16 border-t border-border text-center">
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
             {projects.map((p, index) => (
               <div key={index} className="rounded-lg overflow-hidden flex items-end relative h-105 group">
-                <img src={p.image} alt={p.title} className="absolute object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" />
+                <img src={`/${p.title.toLowerCase().replace(/ /g, "-")}.png`} alt={p.title} className="absolute object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="relative p-6">
                   <span className="tiny text-background-light/70">{p.type}</span>
@@ -124,7 +124,7 @@ export default function Home() {
         </div>
       </section>
       <section className="relative min-h-125 md:min-h-150 flex">
-        <img src="https://static.wixstatic.com/media/9ca5af_92fa585bd8ba4491a9f94697c885493a~mv2.jpg/v1/fill/w_1800,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9ca5af_92fa585bd8ba4491a9f94697c885493a~mv2.jpg" className="object-cover w-full h-full absolute" />
+        <Image src="/athletic-fields.png" alt="Athletic Fields" fill sizes="100%" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/50"></div>
         <div className="relative p-12 md:p-16 flex flex-col justify-between flex-1">
           <h2 className="text-5xl sm:text-6xl md:text-7xl max-w-lg !text-background-light">Let's Shape Your Community</h2>

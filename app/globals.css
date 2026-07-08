@@ -17,6 +17,10 @@ body {
   font-family: var(--font-body);
 }
 
+main {
+  flex: 1;
+}
+
 section:not(:first-of-type, :last-of-type) {
   @apply px-8 md:px-16 py-24;
 }
