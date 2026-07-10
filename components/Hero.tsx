@@ -5,13 +5,14 @@ import Link from "next/link";
 import { projects, ProjectType } from "@/data/projectData";
 
 export default function Hero() {
-  const [featuredProjects, setFeaturedProjects] = useState<ProjectType[]>([]);
+  const [featuredProjects, setFeaturedProjects] = useState<ProjectType[]>(() => projects.slice(0, 4));
   const [current, setCurrent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const shuffled = [...projects].sort(() => Math.random() - 0.5);
     setFeaturedProjects(shuffled.slice(0, 4));
+    setCurrent(0);
   }, []);
 
   const goToSlide = useCallback((index: number) => {
@@ -30,12 +31,9 @@ export default function Hero() {
   }, [current, featuredProjects.length, goToSlide]);
 
   useEffect(() => {
-    if (featuredProjects.length === 0) return;
     const timer = setInterval(next, 5500);
     return () => clearInterval(timer);
   }, [next, featuredProjects.length]);
-
-  if (featuredProjects.length === 0) return;
 
   return (
     <section className="relative min-h-svh flex justify-center items-end">
