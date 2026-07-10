@@ -21,11 +21,11 @@ main {
   flex: 1;
 }
 
-section:not(:first-of-type, :last-of-type) {
-  @apply px-8 md:px-16 py-24;
+section:not(:has(> img)) {
+  @apply px-8 md:px-16;
 }
 
-section:not(:first-of-type, :last-of-type) > div {
+section:not(:has(> img)) > div {
   @apply max-w-7xl mx-auto;
 }
 

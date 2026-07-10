@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Hero from "@/components/Hero";
+import { projects } from "@/data/projectData";
 
 const stats = [
   { label: "Years of Excellence", number: 25 },
@@ -8,13 +9,6 @@ const stats = [
   { label: "Awards Received", number: 15 },
   { label: "Team Members", number: 10 }
 ]
-
-const projects = [
-  { title: "Simpson Mine Park", type: "Parks & Recreation" },
-  { title: "Globeville Landing Park", type: "Urban Design" },
-  { title: "Discovery Park", type: "Parks & Recreation" },
-  { title: "Wonderland Creek", type: "Environmental Design" }
-];
 
 const services = [
   { title: "Landscape Architecture", icon: "ri-building-line", description: "Comprehensive design services for parks, plazas, streetscapes, trails, and natural open spaces that balance aesthetics with function." },
@@ -35,8 +29,8 @@ const rewards = [
 export default function Home() {
   return (
     <main>
-      <Hero projects={projects} />
-      <section className="bg-background-light">
+      <Hero />
+      <section className="bg-background-light py-24">
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -64,7 +58,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-background-dark">
+      <section className="bg-background-dark py-24">
         <div>
           <span className="tiny text-primary">Our Work</span>
           <div className="flex flex-col md:flex-row md:items-end justify-between mt-3 gap-8">
@@ -86,7 +80,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-background-light">
+      <section className="bg-background-light py-24">
         <div className="text-center">
           <span className="tiny text-primary">What We Do</span>
           <h2 className="text-4xl md:text-5xl mt-3">Our Services</h2>
@@ -105,7 +99,7 @@ export default function Home() {
           <Link href="/services" className="tiny text-primary inline-flex items-center gap-2 hover:text-secondary transition-colors duration-200">View All Services<i className="ri-arrow-right-line text-xs"></i></Link>
         </div>
       </section>
-      <section className="bg-foreground-dark">
+      <section className="bg-foreground-dark py-24">
         <div>
           <span className="tiny text-secondary">Awards & Recognition</span>
           <div className="flex flex-col md:flex-row md:items-end justify-between mt-3 gap-8">

@@ -17,11 +17,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false); 
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    if (pathname !== "/" || open) {
-      setScrolled(true);
-      return;
-    }
-    setScrolled(false);
     const handleScroll = () => setScrolled(window.scrollY > 64);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -41,7 +36,7 @@ export default function Navbar() {
         </div>
         <nav className={`${open ? "flex" : "hidden md:flex"} flex-col md:flex-row gap-8 px-6 py-6 md:py-0 text-sm font-medium border-t border-border md:border-t-0`}>
           {navs.map((n, index) => (
-            <Link key={index} href={n.link} className={`${isActive ? "text-foreground-light hover:text-primary" : "text-background-light/85 hover:text-background-light"} transition-colors duration-300`}>{n.text}</Link>
+            <Link key={index} href={n.link} className={`${pathname === n.link ? isActive ? "text-primary" : "text-background-light" : isActive ? "text-foreground-light hover:text-primary" : "text-background-light/85 hover:text-background-light"} transition-colors duration-300`}>{n.text}</Link>
           ))}
         </nav>
       </div>
