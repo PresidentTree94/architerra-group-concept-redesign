@@ -66,7 +66,7 @@ export default function Home() {
             <Link href="/projects" className="tiny text-foreground-light flex items-center gap-2 hover:text-primary transition-colors duration-200">View All Projects<i className="ri-arrow-right-line text-xs"></i></Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
-            {projects.map((p, index) => (
+            {projects.slice(0, 4).map((p, index) => (
               <div key={index} className="rounded-lg overflow-hidden flex items-end relative h-105 group">
                 <img src={`/${p.title.toLowerCase().replace(/ /g, "-")}.png`} alt={p.title} className="absolute object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>

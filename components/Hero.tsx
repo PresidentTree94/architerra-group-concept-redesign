@@ -2,18 +2,13 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { projects, ProjectType } from "@/data/projectData";
+import { projects } from "@/data/projectData";
+
+const featuredProjects = projects.slice(0, 4);
 
 export default function Hero() {
-  const [featuredProjects, setFeaturedProjects] = useState<ProjectType[]>(() => projects.slice(0, 4));
   const [current, setCurrent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    const shuffled = [...projects].sort(() => Math.random() - 0.5);
-    setFeaturedProjects(shuffled.slice(0, 4));
-    setCurrent(0);
-  }, []);
 
   const goToSlide = useCallback((index: number) => {
     if (isAnimating) return;
@@ -23,17 +18,17 @@ export default function Hero() {
   }, [isAnimating]);
 
   const next = useCallback(() => {
-    setCurrent((c) => (featuredProjects.length ? (c + 1) % featuredProjects.length : 0));
-  }, [featuredProjects.length]);
+    goToSlide((current + 1) % featuredProjects.length);
+  }, [current, goToSlide]);
 
   const prev = useCallback(() => {
     goToSlide((current - 1 + featuredProjects.length) % featuredProjects.length);
-  }, [current, featuredProjects.length, goToSlide]);
+  }, [current, goToSlide]);
 
   useEffect(() => {
     const timer = setInterval(next, 5500);
     return () => clearInterval(timer);
-  }, [next, featuredProjects.length]);
+  }, [next]);
 
   return (
     <section className="relative min-h-svh flex justify-center items-end">
