@@ -17,7 +17,7 @@ export default function Projects() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
         <div className="relative flex flex-col justify-center items-center flex-1">
           <span className="tiny text-background-light/70">Our Work</span>
-          <h1 className="mt-4 text-7xl text-background-light">Projects</h1>
+          <h1 className="mt-4 text-5xl sm:text-6xl md:text-7xl text-background-light">Projects</h1>
         </div>
       </section>
       <section className="py-10 border-b border-border">
