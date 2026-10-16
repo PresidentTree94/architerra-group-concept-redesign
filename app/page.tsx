@@ -41,7 +41,7 @@ export default function Home() {
               </h2>
               <p className="text-sm text-foreground-light">At The Architerra Group, we believe that achieving balance is fundamental to successful design: balance between the transformation and conservation of the landscape; balance between diverse goals of project stakeholders; and balance between a creative vision and project constraints.</p>
               <p className="text-sm text-foreground-light mt-6 mb-8">Our firm's mission is to enhance local communities through the design of public spaces. Our inclusive landscape architecture design process allows us to work for the users of our projects by working with them.</p>
-              <Link href="/about" className="tiny text-primary border-b border-primary inline-flex items-center gap-2 pb-1 hover:border-secondary hover:text-secondary transition-colors duration-200">Learn Our Story<i className="ri-arrow-right-line text-xs"></i></Link>
+              <Link href="#" className="tiny text-primary border-b border-primary inline-flex items-center gap-2 pb-1 hover:border-secondary hover:text-secondary transition-colors duration-200">Learn Our Story<i className="ri-arrow-right-line text-xs"></i></Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-4">
               <Image src="/open-spaces.png" alt="Open Spaces" width={1590} height={710} className="h-80 rounded-lg object-cover" />
@@ -73,7 +73,7 @@ export default function Home() {
                 <div className="relative p-6">
                   <span className="tiny text-background-light/70">{p.type}</span>
                   <h3 className="text-xl text-background-light mt-1 mb-2">{p.title}</h3>
-                  <Link href="/projects" className="tiny flex items-center gap-2 text-secondary font-medium transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">View Project<i className="ri-arrow-right-line text-xs"></i></Link>
+                  <Link href="#" className="tiny flex items-center gap-2 text-secondary font-medium transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">View Project<i className="ri-arrow-right-line text-xs"></i></Link>
                 </div>
               </div>
             ))}
@@ -86,7 +86,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl mt-3">Our Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 mb-12">
             {services.map((s, index) => (
-              <Link href="/services" key={index} className="bg-background-dark hover:bg-secondary/10 transition-colors duration-300 p-8 rounded-lg text-left group flex flex-col justify-between gap-5">
+              <Link href="#" key={index} className="bg-background-dark hover:bg-secondary/10 transition-colors duration-300 p-8 rounded-lg text-left group flex flex-col justify-between gap-5">
                 <div>
                   <i className={`${s.icon} text-2xl text-secondary p-3 group-hover:text-primary transition-colors duration-300`}></i>
                   <h3 className="font-light text-lg mb-4 mt-8 group-hover:text-primary transition-colors duration-300">{s.title}</h3>
@@ -96,7 +96,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <Link href="/services" className="tiny text-primary inline-flex items-center gap-2 hover:text-secondary transition-colors duration-200">View All Services<i className="ri-arrow-right-line text-xs"></i></Link>
+          <Link href="#" className="tiny text-primary inline-flex items-center gap-2 hover:text-secondary transition-colors duration-200">View All Services<i className="ri-arrow-right-line text-xs"></i></Link>
         </div>
       </section>
       <section className="bg-foreground-dark py-24">
@@ -104,7 +104,7 @@ export default function Home() {
           <span className="tiny text-secondary">Awards & Recognition</span>
           <div className="flex flex-col md:flex-row md:items-end justify-between mt-3 gap-8">
             <h2 className="!text-background-light text-4xl md:text-5xl">Excellence in<br/>Landscape Architecture</h2>
-            <Link href="/recognition" className="tiny text-secondary flex items-center gap-2 hover:text-[oklch(.76_.1_155)] transition-colors duration-200">View All Awards<i className="ri-arrow-right-line text-xs"></i></Link>
+            <Link href="#" className="tiny text-secondary flex items-center gap-2 hover:text-[oklch(.76_.1_155)] transition-colors duration-200">View All Awards<i className="ri-arrow-right-line text-xs"></i></Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-16">
             {rewards.map((r, index) => (
@@ -123,7 +123,7 @@ export default function Home() {
         <div className="relative p-12 md:p-16 flex flex-col justify-between flex-1">
           <h2 className="text-5xl sm:text-6xl md:text-7xl max-w-lg !text-background-light">Let's Shape Your Community</h2>
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8">
-            <Link href="/contact" className="bg-background-light px-6 py-4 flex items-center gap-4 hover:bg-[oklch(.93_.04_155)] group transition-colors duration-300">
+            <Link href="#" className="bg-background-light px-6 py-4 flex items-center gap-4 hover:bg-[oklch(.93_.04_155)] group transition-colors duration-300">
               <span className="tiny">Start A Conversation</span>
               <div className="bg-foreground-dark group-hover:bg-primary w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300">
                 <i className="ri-arrow-right-line text-background-light text-sm"></i>
